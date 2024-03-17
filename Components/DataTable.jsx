@@ -18,8 +18,9 @@ export default ({ setCreateShipmentModel, allShipmentsdata }) => {
 						Create Tracking
 					</h3>
 					<p className="text-gray-600 mt-2">
-						Lorem Ipsum is simply dummy text of the printing and
-						typesetting industry.
+						Create a tracking link. This creates a transaction
+						record on the blockchain which can then be tracked
+						through this application.
 					</p>
 				</div>
 				<div className="mt-3 md:mt-0">

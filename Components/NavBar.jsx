@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from 'react'
 import images from '../Images/index'
 import Image from 'next/image'
 
-import { TrackingContext } from '../Context/TrackingContext'
+import { TrackingContext } from '../Context/TrackingContextProvider'
 import { Nav3 } from '../Components/index'
 export default () => {
 	const [state, setState] = useState(false)

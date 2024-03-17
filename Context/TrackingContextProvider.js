@@ -3,7 +3,7 @@ import Web3Modal from 'web3modal'
 import { ethers } from 'ethers'
 
 //INTERNAL IMPORT
-import tracking from '../Context/Tracking.json'
+import tracking from './Tracking.json'
 const ContractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 const ContractABI = tracking.abi
 
@@ -24,11 +24,11 @@ export const TrackingProvider = ({ children }) => {
 
 		try {
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 			const signer = provider.getSigner()
@@ -53,11 +53,11 @@ export const TrackingProvider = ({ children }) => {
 	const getAllShipment = async () => {
 		try {
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 			const contract = fetchContract(provider)
@@ -88,11 +88,11 @@ export const TrackingProvider = ({ children }) => {
 				method: 'eth_accounts',
 			})
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 
@@ -115,11 +115,11 @@ export const TrackingProvider = ({ children }) => {
 				method: 'eth_accounts',
 			})
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 			const signer = provider.getSigner()
@@ -152,11 +152,11 @@ export const TrackingProvider = ({ children }) => {
 			})
 
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 
@@ -191,11 +191,11 @@ export const TrackingProvider = ({ children }) => {
 			})
 
 			const web3Modal = new Web3Modal()
-			await web3Modal.updateTheme({
-				main: 'rgb(29, 35, 42)',
-				background: 'rgb(29, 35, 42)',
-				border: 'rgb(6, 182, 212)',
-			})
+			// await web3Modal.updateTheme({
+			// 	main: 'rgb(29, 35, 42)',
+			// 	background: 'rgb(29, 35, 42)',
+			// 	border: 'rgb(6, 182, 212)',
+			// })
 			const connection = await web3Modal.connect()
 			const provider = new ethers.providers.Web3Provider(connection)
 			const signer = provider.getSigner()

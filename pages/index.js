@@ -10,7 +10,8 @@ import {
 	GetShipment,
 	StartShipment,
 } from '../Components/index'
-import { TrackingContext } from '../Context/TrackingContext'
+import { TrackingContext } from '../Context/TrackingContextProvider'
+import Link from 'next/link'
 
 const index = () => {
 	const {
@@ -55,51 +56,60 @@ const index = () => {
 					<div className="max-w-md">
 						<h1 className="mb-5 text-5xl font-bold">Hello there</h1>
 						<p className="mb-5">
-							Provident cupiditate voluptatem et in. Quaerat
-							fugiat ut assumenda excepturi exercitationem quasi.
-							In deleniti eaque aut repudiandae et a id nisi.
+							This application helps track shipment records on the
+							blockchain. Through this application, you can
+							create, track, and complete a shipment.
+							Additionally, there are a few quality of life
+							features such as a user profile and a data table to
+							view the shipments in an organised manner.
 						</p>
-						<button className="btn btn-outline">Get Started</button>
+						<Link href={'#main'} scroll={false}>
+							<button className="btn btn-outline">
+								Get Started
+							</button>
+						</Link>
 					</div>
 				</div>
 			</div>
-			<Services
-				setOpenProfile={setOpenProfile}
-				setCompleteModal={setCompleteModal}
-				setGetModel={setGetModel}
-				setStartModal={setStartModal}
-			/>
+			<section id="main">
+				<Services
+					setOpenProfile={setOpenProfile}
+					setCompleteModal={setCompleteModal}
+					setGetModel={setGetModel}
+					setStartModal={setStartModal}
+				/>
 
-			<Table
-				setCreateShipmentModel={setCreateShipmentModel}
-				allShipmentsdata={allShipmentsdata}
-			/>
-			<Form
-				createShipmentModel={createShipmentModel}
-				createShipment={createShipment}
-				setCreateShipmentModel={setCreateShipmentModel}
-			/>
-			<Profile
-				openProfile={openProfile}
-				setOpenProfile={setOpenProfile}
-				currentUser={currentUser}
-				getShipmentsCount={getShipmentsCount}
-			/>
-			<CompleteShipment
-				completeModal={completeModal}
-				setCompleteModal={setCompleteModal}
-				completeShipment={completeShipment}
-			/>
-			<GetShipment
-				getModel={getModel}
-				setGetModel={setGetModel}
-				getShipment={getShipment}
-			/>
-			<StartShipment
-				startModal={startModal}
-				setStartModal={setStartModal}
-				startShipment={startShipment}
-			/>
+				<Table
+					setCreateShipmentModel={setCreateShipmentModel}
+					allShipmentsdata={allShipmentsdata}
+				/>
+				<Form
+					createShipmentModel={createShipmentModel}
+					createShipment={createShipment}
+					setCreateShipmentModel={setCreateShipmentModel}
+				/>
+				<Profile
+					openProfile={openProfile}
+					setOpenProfile={setOpenProfile}
+					currentUser={currentUser}
+					getShipmentsCount={getShipmentsCount}
+				/>
+				<CompleteShipment
+					completeModal={completeModal}
+					setCompleteModal={setCompleteModal}
+					completeShipment={completeShipment}
+				/>
+				<GetShipment
+					getModel={getModel}
+					setGetModel={setGetModel}
+					getShipment={getShipment}
+				/>
+				<StartShipment
+					startModal={startModal}
+					setStartModal={setStartModal}
+					startShipment={startShipment}
+				/>
+			</section>
 		</>
 	)
 }
